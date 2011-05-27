@@ -80,7 +80,8 @@ public class Ticket {
 			while(rsTickets.next()) {
 				Integer iTicketId = rsTickets.getInt("ticket_id");
 				String sSubject = Driver.fixMagicQuotes(rsTickets.getString("subject"));
-				String sMask = Driver.fixMagicQuotes(rsTickets.getString("mask").trim());
+				String sMask = rsTickets.getString("ticket_id");
+//				String sMask = Driver.fixMagicQuotes(rsTickets.getString("mask").trim());
 				Integer iCreatedDate = rsTickets.getInt("created_date");
 				Integer iUpdatedDate = rsTickets.getInt("updated_date");
 				Integer isWaiting = 0;
